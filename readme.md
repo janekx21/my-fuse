@@ -11,5 +11,23 @@ Then run the filesystem with
 ```
 mkdir /tmp/mnt
 RUST_LOG=error cargo run --release -- /tmp/mnt
+#        ^^^^^ log level can be error,warn,info,debug
 ```
 
+
+For help run
+```
+$ cargo run -- --help
+Custom FUSE filesystem
+
+Usage: my-fuse <MOUNT_POINT>
+
+Arguments:
+  <MOUNT_POINT>  Path to the moint point of the filesystem. Example: /mnt
+
+Options:
+  -h, --help     Print help
+  -V, --version  Print version
+```
+
+There are some [Benchmarks](benchmark.md).
